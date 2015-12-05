@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Major American companies</title>
+      
+    <link rel="stylesheet" type="text/css" src="stylesheet.css">
+        
+        <link href='https://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
+        
+        <style type="text/css">
+            #wrapper {color: red; background:#333; margin: 0 auto;} 
+            #map {
+                width: 950px;
+                height: 750px; margin-left: 165px; margin-top:00px; align-content: center;
+            }
+            
+            
+            h1 {text-align: center;font-size: 70px; font-family: sans-serif;color: #2ECC71; margin-top: -20px; padding-top: 30px; font-family: 'Pathway Gothic One', sans-serif;}
+            
+        h2 { text-align: center;font-size: 50px; font-family: sans-serif;color: #2ECC71; font-family: 'Pathway Gothic One', sans-serif;}   
+            p {font-family: 'Pathway Gothic One', sans-serif;color: #333; font-size: 20px;}
+        </style>
+        
+         
+
+
+<!----------------APPLY KEY HERE --------------------------->
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALM7bhQEWFlTjFuByExS6Avnum1QTcPwk&sensor=false"></script>
+        
+   
+
+        
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        
+        <script type="text/javascript">
+         
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                
+                
+                var mapOptions = {
+                    
+                    zoom: 4,
+
+                    
+                    center: new google.maps.LatLng(39.1067, -94.6764), // New York
+
+                 
+                    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#333739"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#2ecc71"}]},{"featureType":"poi","stylers":[{"color":"#2ecc71"},{"lightness":-7}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#2ecc71"},{"lightness":-28}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#2ecc71"},{"visibility":"on"},{"lightness":-15}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#2ecc71"},{"lightness":-18}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#2ecc71"},{"lightness":-34}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#333739"},{"weight":0.8}]},{"featureType":"poi.park","stylers":[{"color":"#2ecc71"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#333739"},{"weight":0.3},{"lightness":10}]}]
+                };
+
+               
+                var mapElement = document.getElementById('map');
+
+               
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+        var cart = 'walmartsmall.png' 
+        var burger = 'mcdonaldssmall.png'
+         var car = 'fordsmall.png'       
+                var bank = 'boismall.png'
+                var oil = 'exxonsmall.png'
+                var apple = 'applesmall.png'
+                var nike = 'nikesmall.png'
+               
+                
+//    MARKERS            
+                
+                
+    var marker2 = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.2269, -80.8433),
+                    map: map,
+                    title: 'Bank of America', icon: bank
+                });            
+                
+                
+        var marker3 = new google.maps.Marker({
+                    position: new google.maps.LatLng(42.3314, -83.0458),
+                    map: map,
+                    title: 'Ford', icon: car
+                }); 
+                
+                
+        var marker4 = new google.maps.Marker({
+                    position: new google.maps.LatLng(32.8117, -96.9508),
+                    map: map,
+                    title: 'Exxon Mobil', icon: oil
+                });   
+                
+                
+                var marker5 = new google.maps.Marker({
+                    position: new google.maps.LatLng(37.3175, -122.0419),
+                    map: map,
+                    title: 'Apple', icon: apple
+                });    
+                
+                
+                
+                var marker6 = new google.maps.Marker({
+                    position: new google.maps.LatLng(36.3667, -94.2133),
+                    map: map,
+                    title: 'Walmart', icon: cart
+                });    
+                
+                
+            var marker7 = new google.maps.Marker({
+                    position: new google.maps.LatLng(45.5200, -122.681),
+                    map: map,
+                    title: 'Nike', icon: nike
+                });        
+                
+                
+                 var marker8 = new google.maps.Marker({
+                    position: new google.maps.LatLng(41.8400, -87.953),
+                    map: map,
+                    title: 'McDonalds', icon: burger
+                });       
+                
+ 
+                
+//CONTENT                
+                
+        var contentString = '<div id="content" style="width: 540px;">' + '<img src="boi.png" style="float: right; margin-left: 8px;">' + '<h2>Bank of America</h2>'+'<p>American multinational banking and financial services corporation headquartered in Charlotte, North Carolina. It is the second largest bank holding company in the United States by assets.</p>'+'</div>';   
+                
+    var contentString2 = '<div id="content" style="width: 540px;">' + '<img src="ford.png" style="float: right; margin-left: 8px;">' + '<h2>Ford Motors</h2>'+'<p>an American multinational automaker headquartered in Dearborn, Michigan, a suburb of Detroit. It was founded by Henry Ford and incorporated on June 16, 1903.</p>'+'</div>';           
+                
+            var contentString3 = '<div id="content" style="width: 540px;">' + '<img src="exxon.png" style="float: right; margin-left: 8px;">' + '<h2>Exxon Mobil</h2>'+'<p>Exxon Mobil Corp. is an American multinational oil and gas corporation headquartered in Irving, Texas.</p>'+'</div>';               
+               
+                
+                 var contentString4 = '<div id="content" style="width: 540px;">' + '<img src="Apple.png" style="float: right; margin-left: 8px;">' + '<h2>Apple Inc.</h2>'+'<p>Apple Inc. is an American multinational technology company headquartered in Cupertino, California, that designs, develops, and sells consumer electronics</p>'+'</div>';               
+                
+                
+                var contentString5 = '<div id="content" style="width: 540px;">' + '<img src="walmart.jpg" style="float: right; margin-left: 8px;">' + '<h2>Walmart</h2>'+'<p>American multinational retail corporation that operates a chain of hypermarkets, discount department stores and grocery stores. </p>'+'</div>';  
+                
+                
+            var contentString6 = '<div id="content" style="width: 540px;">' + '<img src="nike.jpg" style="float: right; margin-left: 8px;">' + '<h2>Nike</h2>'+'<p>American multinational corporation that is engaged in the design, development, manufacturing and worldwide marketing and sales of footwear, apparel, equipment, accessories and services. </p>'+'</div>';  
+                    
+                
+                
+             
+            var contentString7 = '<div id="content" style="width: 600px;">' + '<img src="mcdonalds.jpg" style="float: right; margin-left: 8px;">' + '<h2>McDonalds</h2>'+'<p>the worlds largest chain of hamburger fast food restaurants, serving around 68 million customers daily in 119 countries across 35,000 outlets. </p>'+'</div>';          
+                
+ 
+// INFOWINDOWS               
+                
+         var infoWindow = new google.maps.InfoWindow({
+      content: contentString  
+    }); 
+                
+        var infoWindow2 =  new google.maps.InfoWindow({
+      content: contentString2  
+    });       
+       
+                   var infoWindow3 =  new google.maps.InfoWindow({
+      content: contentString3  
+    });       
+       
+                var infoWindow4 =  new google.maps.InfoWindow({
+      content: contentString4  
+    });       
+         
+                var infoWindow5 =  new google.maps.InfoWindow({
+      content: contentString5  
+    });       
+        
+                var infoWindow6 =  new google.maps.InfoWindow({
+      content: contentString6  
+    });   
+                
+    var infoWindow7 =  new google.maps.InfoWindow({
+      content: contentString7  
+    });               
+                
+
+//EVENT LISTENERS                
+                
+    marker2.addListener('click', function() {
+      infoWindow2.close();infoWindow5.close(); infoWindow3.close();infoWindow4.close(); infoWindow6.close();infoWindow7.close();infoWindow.open(map, marker2);
+    });  
+                
+                
+    marker3.addListener('click', function() {
+         infoWindow.close();infoWindow3.close();infoWindow4.close();infoWindow5.close();infoWindow6.close();infoWindow7.close();
+       infoWindow2.open(map, marker3);
+    });             
+       
+ marker4.addListener('click', function() {
+         infoWindow.close();infoWindow2.close();infoWindow4.close();infoWindow5.close();infoWindow6.close();infoWindow7.close();
+       infoWindow3.open(map, marker4);
+    });             
+          
+                
+                marker5.addListener('click', function() {
+         infoWindow.close();infoWindow2.close();infoWindow3.close();infoWindow5.close();infoWindow6.close();infoWindow7.close();
+       infoWindow4.open(map, marker5);
+    });     
+         
+                
+                 marker6.addListener('click', function() {
+         infoWindow.close();infoWindow2.close();infoWindow3.close(); infoWindow4.close();infoWindow6.close();infoWindow7.close();
+       infoWindow5.open(map, marker6);
+    });     
+           
+                
+                
+marker7.addListener('click', function() {
+         infoWindow.close();infoWindow2.close();infoWindow3.close(); infoWindow4.close(); infoWindow5.close();infoWindow7.close();
+       infoWindow6.open(map, marker7);
+    });                     
+                
+         
+marker8.addListener('click', function() {
+         infoWindow.close();infoWindow2.close();infoWindow3.close(); infoWindow4.close(); infoWindow5.close();infoWindow6.close();
+       infoWindow7.open(map, marker8);
+    });                         
+                
+                
+                
+            }
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+        
+        <h1>SOME MAJOR COMPANIES IN AMERICA</h1>
+      
+
+        <div id="map"></div>
+            
+            </div>
+    </body>
+        
+        
+</html>
